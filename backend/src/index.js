@@ -9,9 +9,16 @@ import job from "./lib/cron.js";
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-job.start();
+if (process.env.NODE_ENV === "production") {
+  job.start();
+}
+
 app.use(express.json());
 app.use(cors());
+
+app.get("/", (req, res) => {
+  res.send("Book Store API running 🚀");
+});
 
 app.use("/api/auth", authRoutes);
 app.use("/api/books", bookRoutes);
