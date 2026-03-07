@@ -4,6 +4,7 @@ import { Link } from "expo-router";
 import { useState } from "react";
 import {
   ActivityIndicator,
+  Alert,
   KeyboardAvoidingView,
   Platform,
   Text,
@@ -13,14 +14,23 @@ import {
 } from "react-native";
 import styles from "../../assets/styles/login.styles.js";
 import COLORS from "../../constants/colors.js";
+import { useAuthStore } from "../../store/authStore.js";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const { isLoading, login } = useAuthStore();
 
-  const handleLogin = () => {};
+  const handleLogin = async () => {
+    const res = await login(email, password);
+
+    if (!res.success)
+      Alert.alert(
+        "Login Failed",
+        res.message || "An error occurred during login",
+      );
+  };
 
   return (
     <KeyboardAvoidingView
