@@ -45,7 +45,15 @@ export default function Home() {
       if (refresh || pageNum === 1) {
         setBooks(data.books);
       } else {
-        setBooks((prev) => [...prev, ...data.books]);
+        setBooks((prevBooks) => {
+          const merged = [...prevBooks, ...data.books];
+
+          const unique = Array.from(
+            new Map(merged.map((book) => [book._id, book])).values(),
+          );
+
+          return unique;
+        });
       }
 
       setHasMore(pageNum < data.totalPages);
@@ -145,7 +153,7 @@ export default function Home() {
         contentContainerStyle={styles.listContainer}
         showsVerticalScrollIndicator={false}
         onEndReached={handleLoadMore}
-        onEndReachedThreshold={0.1}
+        onEndReachedThreshold={0.4}
         refreshControl={
           <RefreshControl
             refreshing={refreshing}
