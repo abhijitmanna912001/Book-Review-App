@@ -1,8 +1,8 @@
 # 📚 Book Review App
 
-A full-stack **mobile book recommendation platform** built with **React Native (Expo)** and **Node.js** where users can share, discover, and manage book reviews.
+A full-stack **mobile book recommendation platform** built with **React Native (Expo)** and **Node.js**. Share, discover, and manage book reviews across a community of readers.
 
-Users can create posts with book cover images, rate books, and explore recommendations shared by the community.
+Users can create posts with book cover images, rate titles using a 5-star system, and explore a real-time feed of recommendations.
 
 ---
 
@@ -10,101 +10,143 @@ Users can create posts with book cover images, rate books, and explore recommend
 
 ### 🔐 Authentication
 
-- User Signup & Login
-- Secure JWT-based authentication
-- Persistent login sessions
-- Logout functionality
+* **Secure Access:** User Signup & Login with JWT-based authentication.
+* **Session Management:** Persistent login sessions and secure logout functionality.
 
-### 📱 Cross Platform
+### 📱 Cross-Platform Support
 
-- Works on **Android**
-- Works on **iOS**
-- Runs in **Web Browser** via Expo
+* **Android & iOS:** Full mobile compatibility via Expo.
+* **Web:** Runs directly in the browser.
 
-### 📊 App Screens
+### 📊 Comprehensive UI
 
-The app includes multiple screens for a complete user experience:
+* **Home Feed:** Infinite scroll with pull-to-refresh.
+* **Create Review:** Easy-to-use form with image uploading.
+* **Profile:** Manage your own posts and view personal stats.
+* **Polished UX:** Smooth loading indicators and custom splash screens.
 
-- Authentication Screen
-- Home Feed
-- Create Review
-- Profile Screen
-- Loading / Utility Screens
+### 🛠 Tech Stack
 
-### 📚 Book Recommendation System
+### 📱 Frontend (Mobile App)
 
-Users can:
+* **Framework:** [React Native](https://reactnative.dev/) with [Expo](https://expo.dev/) (SDK 50+)
+* **Navigation:** [Expo Router](https://docs.expo.dev/router/introduction/) (File-based routing)
+* **State Management:** [Zustand](https://github.com/pmndrs/zustand) (Lightweight & Fast)
+* **Image Handling:** [Expo Image](https://docs.expo.dev/versions/latest/sdk/image/) & [Image Picker](https://docs.expo.dev/versions/latest/sdk/image-picker/)
+* **Styling:** NativeWind / Standard StyleSheet
 
-- Create book recommendations
-- Upload book cover images
-- Rate books with a **5-star rating system**
-- Write captions/reviews
+### ⚙️ Backend (Server)
 
-### 🔄 Infinite Feed
+* **Runtime:** [Node.js](https://nodejs.org/)
+* **Framework:** [Express.js](https://expressjs.com/)
+* **Database:** [MongoDB](https://www.mongodb.com/) with [Mongoose](https://mongoosejs.com/) (ODM)
+* **Authentication:** [JWT](https://jwt.io/) (JSON Web Tokens) & [bcryptjs](https://www.npmjs.com/package/bcryptjs)
 
-- Infinite scroll pagination
-- Pull-to-refresh support
-- Optimized loading performance
+### ☁️ Cloud Services & Infrastructure
 
-### 🖼 Media Upload
-
-- Upload book cover images
-- Image storage via **Cloudinary**
-
-### ✏️ Profile Management
-
-Users can:
-
-- View their posted recommendations
-- Delete their posts
-- View profile information
-
-### 🔔 User Experience
-
-- Confirmation alerts before deletion
-- Smooth loading indicators
-- Custom splash/loading screen
-- Clean modern UI
-
-### 🎨 Custom UI
-
-- Multiple UI themes
-- Responsive layout
-- Modern card-based feed design
-
-### 💻 Developer Friendly
-
-- Runs on **any laptop**
-- No Mac required for development
-- Expo development workflow
+* **Image Storage:** [Cloudinary](https://cloudinary.com/) (API-based media management)
+* **Deployment:** Render (Backend) & Expo EAS (Mobile)
 
 ---
 
-## 🛠 Tech Stack
+## ⚙️ Installation & Setup
 
-### Mobile App
+### 1️⃣ Clone the Repository
 
-- React Native
-- Expo
-- Expo Router
-- Zustand (State Management)
-- Expo Image Picker
-- Expo Image
-- React Native FlatList
+```bash
+git clone https://github.com/abhijitmanna912001/book-review-app.git
+cd book-review-app
 
-### Backend
+```
 
-- Node.js
-- Express.js
-- MongoDB
-- Mongoose
-- JWT Authentication
-- Cloudinary (Image Storage)
+### 2️⃣ Backend Setup
 
-### Deployment
+Navigate to the backend folder and install dependencies:
 
-- Backend deployed online
-- Mobile app built with Expo
-- Ready for **Play Store deployment**
+```bash
+cd backend
+npm install
+
+```
+
+Create a `.env` file in the `backend` directory:
+
+```env
+PORT=3000
+MONGO_URI=your_mongodb_connection
+JWT_SECRET=your_secret_key
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_API_SECRET=your_api_secret
+
+```
+
+Start the server:
+
+```bash
+npm run dev
+
+```
+
+### 3️⃣ Mobile App Setup
+
+Navigate to the mobile folder and install dependencies:
+
+```bash
+cd ../mobile
+npm install
+
+```
+
+Start the Expo development server:
+
+```bash
+npx expo start
+
+```
+
+*Scan the QR code with the **Expo Go** app on your phone or press **'a'** for Android / **'i'** for iOS.*
 
 ---
+
+## 🌐 API Endpoints
+
+### Authentication
+
+* `POST /api/auth/signup` - Register a new user
+* `POST /api/auth/login` - Authenticate user
+
+### Books
+
+* `GET /api/books` - Fetch all reviews (paginated)
+* `GET /api/books/user` - Fetch reviews by logged-in user
+* `POST /api/books` - Create a new review
+* `DELETE /api/books/:id` - Remove a review
+
+---
+
+## 🤝 Contributing
+
+Contributions make the open-source community an amazing place to learn and create.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+## 📜 License
+
+Distributed under the **MIT License**.
+
+## 👨‍💻 Author
+
+Abhijit Manna
+
+* GitHub: [@abhijitmanna912001](https://github.com/abhijitmanna912001)
+
+---
+
+*If you found this project helpful, please give it a ⭐ on GitHub!*
