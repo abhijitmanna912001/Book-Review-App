@@ -4,6 +4,20 @@ A full-stack **mobile book recommendation platform** built with **React Native (
 
 Users can create posts with book cover images, rate titles using a 5-star system, and explore a real-time feed of recommendations.
 
+## 📲 Download APK
+
+You can try the latest Android build of the app directly:
+
+<https://expo.dev/accounts/abhi912001/projects/mobile/builds/81cb737a-bebe-4153-8ee5-3850aa4f6297>
+
+### Installation Steps
+
+1. Download the APK file from the link above.
+2. Transfer it to your Android device if downloaded on a computer.
+3. Open the file and allow "Install from Unknown Sources" if prompted.
+4. Install and launch the app.
+
+> ⚠️ **Note:** Since this app is not yet published on the Play Store, Android may warn that the app comes from an unknown developer.
 ---
 
 ## 🚀 Features
@@ -25,7 +39,7 @@ Users can create posts with book cover images, rate titles using a 5-star system
 * **Profile:** Manage your own posts and view personal stats.
 * **Polished UX:** Smooth loading indicators and custom splash screens.
 
-### 🛠 Tech Stack
+## 🛠 Tech Stack
 
 ### 📱 Frontend (Mobile App)
 
