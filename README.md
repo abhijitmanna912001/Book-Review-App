@@ -93,7 +93,7 @@ npm run dev
 Navigate to the mobile folder and install dependencies:
 
 ```bash
-cd ../mobile
+cd mobile
 npm install
 
 ```
