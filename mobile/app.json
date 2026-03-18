@@ -1,11 +1,11 @@
 {
   "expo": {
     "name": "Book Review App",
-    "slug": "mobile",
+    "slug": "book-review-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "mobile",
+    "scheme": "bookreviewapp",
     "userInterfaceStyle": "automatic",
     "ios": {
       "supportsTablet": true
