@@ -91,3 +91,13 @@ Email: <abhijitmanna912001@gmail.com>
 ---
 
 This privacy policy was generated and customized based on the App Privacy Policy Generator.
+
+## Account Deletion
+
+Users may request deletion of their account and associated data by contacting the Service Provider via email.
+
+To request account deletion, send an email to:
+
+<abhijitmanna912001@gmail.com>
+
+Upon receiving a request, the user's account and associated data will be permanently deleted from the system within a reasonable time.
